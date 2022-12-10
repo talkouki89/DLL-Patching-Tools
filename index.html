@@ -1,7 +1,472 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DLL Patching Tools</title>
+    <script src="../cdn-cgi/apps/head/HwU4Afx3ZsFv3HCMpwtQftaMMBI.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // implement radio-style behaviour for categories
+            for (const input of document.querySelectorAll(".sectionToggle")) {
+                input.onclick = () => {
+                    for (const el of document.querySelectorAll(".sectionToggle")) {
+                        if (el != input) el.checked = false;
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>選擇你要修補的遊戲 !</h1>
+    <div class="icons">
+        <label for="check_beatstream" class="gameicon">
+                <img src="img/aaa_beatstream.jpg">
+                <div>BeatStream</div>
+            </label>
+        <input type="checkbox" id="check_beatstream" class="sectionToggle" />
+        <div class="subsection">
+            <a href="beatstream1.html" class="gameicon">
+                <img src="img/beatstream.jpg">
+                <div>BeatStream</div>
+            </a>
+            <a href="beatstream2.html" class="gameicon">
+                <img src="img/beatstream2.jpg">
+                <div>BeatStream<br>アニムトライヴ</div>
+            </a>
+        </div>
+
+        <a href="bishibashi.html" class="gameicon">
+            <img src="img/bishibashi.jpg">
+            <div>THE ☆ BishiBashi</div>
+        </a>
+
+        <a href="bombergirl.html" class="gameicon">
+            <img src="img/bombergirl.jpg">
+            <div>BomberGirl PC (eacloud)</div>
+        </a>
+
+        <label for="check_chuni" class="gameicon">
+                <img src="img/aaa_chuni.jpg">
+                <div>CHUNITHM</div>
+            </label>
+        <input type="checkbox" id="check_chuni" class="sectionToggle" />
+        <div class="subsection">
+            <a href="chuni.html" class="gameicon">
+                <img src="img/chuni.jpg">
+                <div>CHUNITHM</div>
+            </a>
+            <a href="chuniplus.html" class="gameicon">
+                <img src="img/chuniplus.jpg">
+                <div>CHUNITHM PLUS</div>
+            </a>
+            <a href="chuniair.html" class="gameicon">
+                <img src="img/chuniair.jpg">
+                <div>CHUNITHM AIR</div>
+            </a>
+            <a href="chunistar.html" class="gameicon">
+                <img src="img/chunistar.jpg">
+                <div>CHUNITHM STAR</div>
+            </a>
+            <a href="chuniamazon.html" class="gameicon">
+                <img src="img/chuniamazon.jpg">
+                <div>CHUNITHM AMAZON</div>
+            </a>
+            <a href="chunicrystal.html" class="gameicon">
+                <img src="img/chunicrystal.jpg">
+                <div>CHUNITHM CRYSTAL</div>
+            </a>
+            <a href="chuniparadise.html" class="gameicon">
+                <img src="img/chuniparadise.jpg">
+                <div>CHUNITHM PARADISE</div>
+            </a>
+            <a href="chusan.html" class="gameicon">
+                <img src="img/chusan.jpg">
+                <div>CHUNITHM NEW!!</div>
+            </a>
+            <a href="chusanplus.html" class="gameicon">
+                <img src="img/chusanplus.jpg">
+                <div>CHUNITHM NEW PLUS</div>
+            </a>
+        </div>
+
+        <label for="check_iidx" class="gameicon">
+                <img src="img/aaa_iidx.jpg">
+                <div>beatmania IIDX</div>
+            </label>
+        <input type="checkbox" id="check_iidx" class="sectionToggle" />
+        <div class="subsection">
+            <a href="resort_anthem.html" class="gameicon">
+                <img src="img/resort_anthem.jpg">
+                <div>beatmania IIDX 18 Resort Anthem</div>
+            </a>
+            <a href="lincle.html" class="gameicon">
+                <img src="img/lincle.jpg">
+                <div>beatmania IIDX 19 Lincle</div>
+            </a>
+            <a href="tricoro.html" class="gameicon">
+                <img src="img/tricoro.jpg">
+                <div>beatmania IIDX 20 tricoro</div>
+            </a>
+            <a href="spada.html" class="gameicon">
+                <img src="img/spada.jpg">
+                <div>beatmania IIDX 21 SPADA</div>
+            </a>
+            <a href="pendual.html" class="gameicon">
+                <img src="img/pendual.jpg">
+                <div>beatmania IIDX 22 PENDUAL</div>
+            </a>
+            <a href="copula.html" class="gameicon">
+                <img src="img/copula.jpg">
+                <div>beatmania IIDX 23 copula</div>
+            </a>
+            <a href="sinobuz.html" class="gameicon">
+                <img src="img/sinobuz.jpg">
+                <div>beatmania IIDX 24 SINOBUZ</div>
+            </a>
+            <a href="ballerz.html" class="gameicon">
+                <img src="img/ballerz.jpg">
+                <div>beatmania IIDX 25 CANNON BALLERS</div>
+            </a>
+            <a href="rootage.html" class="gameicon">
+                <img src="img/rootage.jpg">
+                <div>beatmania IIDX 26 Rootage</div>
+            </a>
+            <a href="heroicverse.html" class="gameicon">
+                <img src="img/heroicverse.jpg">
+                <div>beatmania IIDX 27 HEROIC VERSE</div>
+            </a>
+            <a href="bistrover.html" class="gameicon">
+                <img src="img/bistrover.jpg">
+                <div>beatmania IIDX 28 BISTROVER</div>
+            </a>
+            <a href="casthour.html" class="gameicon">
+                <img src="img/casthour.jpg">
+                <div>beatmania IIDX 29 CastHour</div>
+            </a>
+            <a href="resident.html" class="gameicon">
+                <img src="img/resident.jpg">
+                <div>beatmania IIDX 30 CastHour</div>
+            </a>
+        </div>
+
+        <label for="check_ddr" class="gameicon">
+                <img src="img/aaa_ddr.jpg">
+                <div>Dance Dance Revolution</div>
+            </label>
+        <input type="checkbox" id="check_ddr" class="sectionToggle" />
+        <div class="subsection">
+            <a href="ddrx.html" class="gameicon">
+                <img src="img/ddrx.jpg">
+                <div>Dance Dance Revolution X</div>
+            </a>
+            <a href="ddrx2.html" class="gameicon">
+                <img src="img/ddrx2.jpg">
+                <div>Dance Dance Revolution X2</div>
+            </a>
+            <a href="ddrx3.html" class="gameicon">
+                <img src="img/ddrx3.jpg">
+                <div>Dance Dance Revolution X3</div>
+            </a>
+            <a href="ddr2013.html" class="gameicon">
+                <img src="img/ddr2013.jpg">
+                <div>Dance Dance Revolution 2013</div>
+            </a>
+            <a href="ddr2014.html" class="gameicon">
+                <img src="img/ddr2014.jpg">
+                <div>Dance Dance Revolution 2014</div>
+            </a>
+            <a href="ddra.html" class="gameicon">
+                <img src="img/ddra.jpg">
+                <div>Dance Dance Revolution A</div>
+            </a>
+            <a href="ddra20.html" class="gameicon">
+                <img src="img/ddra20.jpg">
+                <div>Dance Dance Revolution A20</div>
+            </a>
+            <a href="ddra20%2b.html" class="gameicon">
+                <img src="img/ddra20%2b.jpg">
+                <div>Dance Dance Revolution A20 Plus</div>
+            </a>
+            <a href="ddra3.html" class="gameicon">
+                <img src="img/DDRA3.jpg">
+                <div>Dance Dance Revolution A3</div>
+            </a>
+        </div>
+
+        <a href="gc4ex.html" class="gameicon">
+            <img src="img/gc4ex.jpg">
+            <div>Groove Coaster 4EX Infinity Highway</div>
+        </a>
+
+        <label for="check_gitadora" class="gameicon">
+                <img src="img/aaa_gitadora.jpg">
+                <div>GuitarFreaks / DrumMania / GITADORA</div>
+            </label>
+        <input type="checkbox" id="check_gitadora" class="sectionToggle" />
+        <div class="subsection">
+            <a href="gfdmv4.html" class="gameicon">
+                <img src="img/gfdmv4.jpg">
+                <div>GuitarFreaks & DrumMania V4 RockxRock</div>
+            </a>
+            <a href="gfdmv5.html" class="gameicon">
+                <img src="img/gfdmv5.jpg">
+                <div>GuitarFreaks & DrumMania V5 Rock to Infinity</div>
+            </a>
+            <a href="gfdmv6.html" class="gameicon">
+                <img src="img/gfdmv6.jpg">
+                <div>GuitarFreaks & DrumMania V6 BLAZING!!!!</div>
+            </a>
+            <a href="gfdmv7.html" class="gameicon">
+                <img src="img/gfdmv7.jpg">
+                <div>GuitarFreaks & DrumMania V7</div>
+            </a>
+            <a href="gfdmv8.html" class="gameicon">
+                <img src="img/gfdmv8.jpg">
+                <div>GuitarFreaks & DrumMania V8</div>
+            </a>
+            <a href="gfdmxg2.html" class="gameicon">
+                <img src="img/gfdmxg2.jpg">
+                <div>GuitarFreaks & DrumMania XG2</div>
+            </a>
+            </a>
+            <a href="gfdmxg3.html" class="gameicon">
+                <img src="img/gfdmxg3.jpg">
+                <div>GuitarFreaks & DrumMania XG3</div>
+            </a>
+            <a href="gitadoraod.html" class="gameicon">
+                <img src="img/od.jpg">
+                <div>GITADORA OverDrive</div>
+            </a>
+            <a href="gitadoratb.html" class="gameicon">
+                <img src="img/tb.jpg">
+                <div>GITADORA Tri-Boost</div>
+            </a>
+            <a href="gitadoratbre.html" class="gameicon">
+                <img src="img/tbre.jpg">
+                <div>GITADORA Tri-Boost Re:EVOLVE</div>
+            </a>
+            <a href="gitadoramatixx.html" class="gameicon">
+                <img src="img/matixx.jpg">
+                <div>GITADORA Matixx</div>
+            </a>
+            <a href="gitadoraexchain.html" class="gameicon">
+                <img src="img/exchain.jpg">
+                <div>GITADORA EXCHAIN</div>
+            </a>
+            <a href="gitadoranextage.html" class="gameicon">
+                <img src="img/nextage.jpg">
+                <div>GITADORA NEX+AGE</div>
+            </a>
+            <a href="gitadorahighvoltage.html" class="gameicon">
+                <img src="img/gitadorahighvoltage.jpg">
+                <div>GITADORA HIGH-VOLTAGE</div>
+            </a>
+        </div>
+
+        <a href="futuretone.html" class="gameicon">
+            <img src="img/futuretone.jpg">
+            <div>Hatsune Miku: Project DIVA Arcade Future Tone</div>
+        </a>
+
+        <label for="check_jubeat" class="gameicon">
+                <img src="img/aaa_jubeat.jpg">
+                <div>jubeat</div>
+            </label>
+        <input type="checkbox" id="check_jubeat" class="sectionToggle" />
+        <div class="subsection">
+            <a href="jubeatripples.html" class="gameicon">
+                <img src="img/ripples.jpg">
+                <div>jubeat ripples</div>
+            </a>
+            <a href="jubeatknit.html" class="gameicon">
+                <img src="img/knit.jpg">
+                <div>jubeat knit</div>
+            </a>
+            <a href="jubeatcopious.html" class="gameicon">
+                <img src="img/copious.jpg">
+                <div>jubeat copious</div>
+            </a>
+            <a href="jubeatsaucer.html" class="gameicon">
+                <img src="img/saucer.jpg">
+                <div>jubeat saucer</div>
+            </a>
+            <a href="jubeatsaucerfulfill.html" class="gameicon">
+                <img src="img/saucerfulfill.jpg">
+                <div>jubeat saucer fulfill</div>
+            </a>
+            <a href="jubeatprop.html" class="gameicon">
+                <img src="img/prop.jpg">
+                <div>jubeat prop</div>
+            </a>
+            <a href="jubeatqubell.html" class="gameicon">
+                <img src="img/qubell.jpg">
+                <div>jubeat Qubell</div>
+            </a>
+            <a href="jubeatclan.html" class="gameicon">
+                <img src="img/clan.jpg">
+                <div>jubeat clan</div>
+            </a>
+            <a href="jubeatfesto.html" class="gameicon">
+                <img src="img/festo.jpg">
+                <div>jubeat festo</div>
+            </a>
+        </div>
+
+        <label for="check_museca" class="gameicon">
+                <img src="img/aaa_museca.jpg">
+                <div>MÚSECA</div>
+            </label>
+        <input type="checkbox" id="check_museca" class="sectionToggle" />
+        <div class="subsection">
+            <a href="museca1.html" class="gameicon">
+                <img src="img/museca1.jpg">
+                <div>MÚSECA</div>
+            </a>
+            <a href="museca2.html" class="gameicon">
+                <img src="img/museca2.jpg">
+                <div>MÚSECA 1+1/2</div>
+            </a>
+        </div>
+
+        <label for="check_Nostalgia" class="gameicon">
+            <img src="img/aaa_Nostalgia.jpg">
+            <div>Nostalgia</div>
+        </label>
+        <input type="checkbox" id="check_Nostalgia" class="sectionToggle" />
+        <div class="subsection">
+            <a href="nostalgiaop2.html" class="gameicon">
+                <img src="img/op2.jpg">
+                <div>Nostalgia Op.2</div>
+            </a>
+            <a href="nostalgiaop3.html" class="gameicon">
+                <img src="img/op3.jpg">
+                <div>Nostalgia Op.3</div>
+            </a>
+        </div>
+
+        <label for="check_popn" class="gameicon">
+                <img src="img/aaa_popn.jpg">
+                <div>Pop'n music</div>
+            </label>
+        <input type="checkbox" id="check_popn" class="sectionToggle" />
+        <div class="subsection">
+            <a href="hellopopn.html" class="gameicon">
+                <img src="img/hellopopn.jpg">
+                <div>Hello! Pop'n Music</div>
+            </a>
+            <a href="popn19tunestreet.html" class="gameicon">
+                <img src="img/tunestreet.jpg">
+                <div>pop'n music 19 Tune Street</div>
+            </a>
+            <a href="popn20fantasia.html" class="gameicon">
+                <img src="img/fantasia.jpg">
+                <div>pop'n music 20 fantasia</div>
+            </a>
+            <a href="popn21sunnypark.html" class="gameicon">
+                <img src="img/sunny.jpg">
+                <div>pop'n music 21 Sunny Park</div>
+            </a>
+            <a href="popn22lapistoria.html" class="gameicon">
+                <img src="img/lapis.jpg">
+                <div>pop'n music 22 Lapistoria</div>
+            </a>
+            <a href="popn23eclale.html" class="gameicon">
+                <img src="img/eclale.jpg">
+                <div>pop'n music 23 éclale</div>
+            </a>
+            <a href="popn24usaneko.html" class="gameicon">
+                <img src="img/usaneko.jpg">
+                <div>pop'n music 24 うさぎと猫と少年の夢</div>
+            </a>
+            <a href="popn25peace.html" class="gameicon">
+                <img src="img/peace.jpg">
+                <div>pop'n music 25 peace</div>
+            </a>
+            <a href="popn26kaimeiriddles.html" class="gameicon">
+                <img src="img/riddles.jpg">
+                <div>pop'n music 26 解明リドルズ</div>
+            </a>
+        </div>
+
+        <label for="check_reflec" class="gameicon">
+                <img src="img/aaa_reflec.jpg">
+                <div>REFLEC BEAT</div>
+            </label>
+        <input type="checkbox" id="check_reflec" class="sectionToggle" />
+        <div class="subsection">
+            <a href="reflecbeat.html" class="gameicon">
+                <img src="img/reflecbeat.jpg">
+                <div>REFLEC BEAT</div>
+            </a>
+            <a href="reflecbeat-limelight.html" class="gameicon">
+                <img src="img/limelight.jpg">
+                <div>REFLEC BEAT limelight</div>
+            </a>
+            <a href="reflecbeat-colette.html" class="gameicon">
+                <img src="img/colette.jpg">
+                <div>REFLEC BEAT colette</div>
+            </a>
+            <a href="reflecbeat-groovin-upper.html" class="gameicon">
+                <img src="img/groovin.jpg">
+                <div>REFLEC BEAT groovin'!! Upper</div>
+            </a>
+            <a href="reflecbeat-volzza2.html" class="gameicon">
+                <img src="img/volzza2.jpg">
+                <div>REFLEC BEAT VOLZZA 2</div>
+            </a>
+            <a href="reflecbeat-reflesia.html" class="gameicon">
+                <img src="img/reflesia.jpg">
+                <div>REFLEC BEAT The Reflesia of Eternity</div>
+            </a>
+        </div>
+
+        <label for="check_sdvx" class="gameicon">
+                <img src="img/aaa_sdvx.jpg">
+                <div>SOUND VOLTEX</div>
+            </label>
+        <input type="checkbox" id="check_sdvx" class="sectionToggle" />
+        <div class="subsection">
+            <a href="sdvx2.html" class="gameicon">
+                <img src="img/sdvx2.jpg">
+                <div>SDVX II INFINITE INFECTION</div>
+                <a href="sdvx3.html" class="gameicon">
+                    <img src="img/sdvx.jpg">
+                    <div>SDVX III GRAVITY WARS</div>
+                </a>
+                <a href="sdvx4.html" class="gameicon">
+                    <img src="img/sdvx4.jpg">
+                    <div>SDVX IV HEAVENLY HAVEN</div>
+                </a>
+                <a href="sdvx5.html" class="gameicon">
+                    <img src="img/sdvx5.jpg">
+                    <div>SDVX V VIVID WAVE</div>
+                </a>
+                <a href="sdvx6.html" class="gameicon">
+                    <img src="img/sdvx6.jpg">
+                    <div>SDVX VI EXCEED GEAR</div>
+                </a>
+        </div>
+        <a href="taikonotatsujin.html" class="gameicon">
+            <img src="img/taikonotatsujin.jpg">
+            <div>Taiko no Tatsujin</div>
+        </a>
+        <a href="synchronica.html" class="gameicon">
+            <div>
+                <img src="img/synchronica.jpg">
+                <div>SYNCHRONICA</div>
+            </div>
+        </a>
+        <a href="dancerush.html" class="gameicon">
+            <div>
+                <img src="img/dancerush.jpg">
+                <div>DANCERUSH STARDOM</div>
+            </div>
+        </a>
+    </div>
 </body>
+
 </html>

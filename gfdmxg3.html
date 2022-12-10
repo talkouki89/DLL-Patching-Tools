@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from mon.im/bemanipatcher/gfdmxg3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 11:18:42 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>GFDM XG3 DLL Modder</title>
+    <script src="../cdn-cgi/apps/head/HwU4Afx3ZsFv3HCMpwtQftaMMBI.js"></script><link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/dllpatcher.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            new Patcher("game.dll", "", [
+                {
+                    name: "Force unlock SECRET folder",
+                    patches: [
+                        {offset: 0x1652D2, off: [0x5B, 0x00], on: [0x4D, 0x01]},
+						{offset: 0x1652E2, off: [0x5D, 0x00], on: [0x4D, 0x01]},
+                        ]
+                }
+            ]);
+        });
+    </script>
+</head>
+<body>
+    <h1>GFDM XG3 DLL Modder</h1>
+</body>
+
+<!-- Mirrored from mon.im/bemanipatcher/gfdmxg3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 11:18:42 GMT -->
+</html>
