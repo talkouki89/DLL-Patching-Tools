@@ -646,8 +646,8 @@
             container.appendChild(this.fileInput);
             container.appendChild(label);
 
-            container.appendChild(createElementClass('h4', null, 'Supported Versions:'));
-            container.appendChild(createElementClass('h5', null, 'Click name to preview patches'));
+            container.appendChild(createElementClass('h4', null, '支援的版本:'));
+            container.appendChild(createElementClass('h5', null, '單擊名稱以預覽補丁'));
             container.appendChild(supportedDlls);
             container.appendChild(this.successDiv);
             container.appendChild(this.errorDiv);
