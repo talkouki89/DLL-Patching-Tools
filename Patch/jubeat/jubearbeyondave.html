@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>jubeat beyond the Ave. DLL Modder</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script type="text/javascript" src="../../js/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../js/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../../js/dllpatcher.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            new PatchContainer([
+                    new Patcher("jubeat.dll", "2023-09-20", [{
+                        name: "Skip Tutorial",
+                        patches: [{
+                            offset: 0xD553F,
+                            off: [0x0F, 0x85],
+                            on: [0x90, 0xE9]
+                        }],
+                    }, {
+                        name: "Select Music Timer Freeze",
+                        patches: [{
+                            offset: 0xBEF65,
+                            off: [0x75],
+                            on: [0xEB]
+                        }],
+                    }, {
+                        name: "Skip Category Select",
+                        patches: [{
+                            offset: 0xBF2EA,
+                            off: [0x04],
+                            on: [0x07]
+                        }],
+                    }, {
+                        name: "Result Timer Freeze",
+                        tooltip: "Counts down to 0 then stops",
+                        patches: [{
+                            offset: 0xA6B1B,
+                            off: [0x75],
+                            on: [0xEB]
+                        }],
+                    }, {
+                        name: "Skip Online Matching",
+                        patches: [{
+                            offset: 0xD15FF,
+                            off: [0x0F, 0x84],
+                            on: [0x90, 0xE9]
+                        }],
+                    }, {
+                        name: "Force Unlock All Markers",
+                        patches: [{
+                            offset: 0x16480B,
+                            off: [0x75],
+                            on: [0xEB]
+                        }, {
+                            offset: 0x1ADAE0,
+                            off: [0x75],
+                            on: [0xEB]
+                        }, {
+                            offset: 0x1ADDCA,
+                            off: [0x0F, 0xB7, 0x45, 0xB0],
+                            on: [0x31, 0xC0, 0x90, 0x90]
+                        }, ]
+                    }, {
+                        name: "Force Unlock All Backgrounds",
+                        patches: [{
+                            offset: 0x13666E,
+                            off: [0x75],
+                            on: [0xEB]
+                        }, {
+                            offset: 0x13694B,
+                            off: [0x0F, 0xB7, 0x45, 0xB0],
+                            on: [0x31, 0xC0, 0x90, 0x90]
+                        }, {
+                            offset: 0x1648BE,
+                            off: [0x75],
+                            on: [0xEB]
+                        }, ]
+                    }, {
+                        name: "Force Enable Expert Option",
+                        patches: [{
+                            offset: 0xDA920,
+                            off: [0x55, 0x8B, 0xEC],
+                            on: [0xB0, 0x01, 0xC3]
+                        }],
+                    }, {
+                        type: "union",
+                        name: "Default Marker For Guest Play",
+                        offset: 0x5B357,
+                        patches: [{
+                            name: "Default",
+                            patch: [0x31],
+                        }, {
+                            name: "Festo",
+                            patch: [0x2E],
+                        }, {
+                            name: "Qubell",
+                            patch: [0x28],
+                        }, {
+                            name: "Shutter",
+                            patch: [0x04]
+                        }]
+                    }]),
+                    new Patcher("jubeat.dll", "2023-11-20", [{
+                        name: "Skip Tutorial",
+                        patches: [{
+                            offset: 0xD795F,
+                            off: [0x0F, 0x85],
+                            on: [0x90, 0xE9]
+                        }],
+                    }, {
+                        name: "Select Music Timer Freeze",
+                        patches: [{
+                            offset: 0xC0E7F,
+                            off: [0x75],
+                            on: [0xEB]
+                        }],
+                    }, {
+                        name: "Skip Category Select",
+                        patches: [{
+                            offset: 0xC120B,
+                            off: [0x04],
+                            on: [0x07]
+                        }],
+                    }, {
+                        name: "Result Timer Freeze",
+                        tooltip: "Counts down to 0 then stops",
+                        patches: [{
+                            offset: 0xA88FB,
+                            off: [0x75],
+                            on: [0xEB]
+                        }],
+                    }, {
+                        name: "Skip Online Matching",
+                        patches: [{
+                            offset: 0xD3A1F,
+                            off: [0x0F, 0x84],
+                            on: [0x90, 0xE9]
+                        }]
+                    }])
+                ]),
+                new PatchContainer([
+                    new Patcher("music_db.dll", "2023-09-20", [{
+                        name: "Unlock all songs",
+                        patches: [{
+                            offset: 0x1EE5,
+                            off: [0x74, 0x0A],
+                            on: [0x90, 0x90]
+                        }]
+                    }, ]),
+                    new Patcher("music_db.dll", "2023-11-20", [{
+                        name: "Unlock all songs",
+                        patches: [{
+                            offset: 0x2135,
+                            off: [0x74, 0x0A],
+                            on: [0x90, 0x90]
+                        }],
+                    }, ])
+                ]);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>jubeat beyond the Ave. DLL Modder</h1>
+</body>
+
+</html>
