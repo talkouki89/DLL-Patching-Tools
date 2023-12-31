@@ -1032,16 +1032,19 @@
                         on: [0xEB]
                     }],
                 }, {
+                    name: "Unlock All Songs",
+                    patches: [{
+                        offset: 0xF5A3C,
+                        off: [0x74],
+                        on: [0xEB]
+                    }],
+                }, {
                     name: "Unlock EX Charts",
                     patches: [{
                         offset: 0x2DB1D0,
                         off: [0x80],
                         on: [0x00]
-                    }, {
-                        offset: 0x2CE2E0,
-                        off: [0x80],
-                        on: [0x00]
-                    }, ],
+                    }],
                 }, {
                     name: "Unlock Deco Parts",
                     patches: [{
